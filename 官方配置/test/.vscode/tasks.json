@@ -1,0 +1,32 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++ 生成活动文件",//标签值是将在任务列表中看到的内容；可以随意命名它。
+			"command": "/usr/bin/g++",		//要运行的程序，此处是g++。
+			"args": [		//args 数组包含将传递给 g++ 的命令行参数
+				"-fdiagnostics-color=always",
+				"-g",
+				//"${file}",	//当前打开的待编译的活动文件（helloworld.cpp），对它进行编译
+                //将"${file}"替换"${workspaceFolder}/*.cpp",来构建多个 C++ 文件;
+                "${workspaceFolder}/*.cpp",
+				"-o",
+				"${fileDirname}/${fileBasenameNoExtension}"
+                //{fileDirname}表示当前路径，fileBasenameNoExtension表示生成与活动文件同名无后缀的可执行文件（helloworld）
+                //
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {//isDefault: 值为true表示支持通过快捷键ctrl+shift+B来执行该编译任务。如果值改为false，也可以从菜单中选择运行：终端—>运行生成任务
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "编译器: /usr/bin/g++"
+		}
+	]
+}
