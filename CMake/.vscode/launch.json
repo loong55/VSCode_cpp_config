@@ -6,8 +6,8 @@
             "name": "(gdb) 启动",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/a.out",
-            //设置待调试的可执行文件为工作空间中bin目录的a.out
+            "program": "${workspaceFolder}/a",
+            //设置待调试的可执行文件为工作空间中bin目录的a
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

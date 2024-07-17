@@ -8,6 +8,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")#编译时显示警告，选择g+
 set(CMAKE_BUILD_TYPE Debug)	#可执行文件设为可调试版本， 默认是Release模式
 
 include_directories(${CMAKE_SOURCE_DIR}/include)#头文件路径，CMAKE_SOURCE_DIR
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build) # 设置可执行文件的输出目录
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}) # 设置可执行文件的输出目录
 
-add_executable(a.out ${SRC_SUB} ${SRC_CUR})#生成可执行文件
+add_executable(a ${SRC_SUB} ${SRC_CUR})#生成可执行文件
